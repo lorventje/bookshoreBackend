@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+
+    <persistence-unit name="persistenceUnit">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <class>domain.Attachment</class>
+        <class>domain.Author</class>
+        <class>domain.Book</class>
+        <class>domain.Publisher</class>
+        <class>domain.Review</class>
+        <class>domain.Reviewer</class>
+        <shared-cache-mode>NONE</shared-cache-mode>
+        <properties>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://studmysql01.fhict.local/dbi302522"/>
+            <property name="javax.persistence.jdbc.password" value="dbi302522"/>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.user" value="dbi302522"/>
+            <property name="eclipselink.ddl-generation" value="create-tables"/>
+            <property name="eclipselink.logging.logger" value="DefaultLogger"/>
+            <property name="eclipselink.logging.level" value="FINE"/>
+        </properties>
+    </persistence-unit>
+</persistence>
